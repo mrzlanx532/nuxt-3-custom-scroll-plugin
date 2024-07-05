@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "nuxt-3-custom-scroll-plugin": "file:..",
     "vue": "^3.4.29"
   },
   "devDependencies": {

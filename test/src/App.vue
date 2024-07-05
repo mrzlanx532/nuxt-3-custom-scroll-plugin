@@ -1,4 +1,18 @@
 <script setup>
+import { onMounted } from 'vue'
+import { DocumentScroll } from 'nuxt-3-custom-scroll-plugin/dist/index.js'
+
+onMounted(() => {
+  window.documentScroll = new DocumentScroll
+
+  try {
+    new ResizeObserver(() => {
+      window.documentScroll.updateScroll()
+    }).observe(document.documentElement)
+  } catch (e) {
+    console.warn('Не удалось установить ResizeObserver для document')
+  }
+})
 import Example from './components/Example.vue'
 </script>
 

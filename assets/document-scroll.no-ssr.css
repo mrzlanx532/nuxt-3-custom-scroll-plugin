@@ -1,0 +1,140 @@
+:root {
+    --document-scroll-border-radius: 5px;
+    --document-scroll-thickness: 4px;
+    --document-scroll-background: grey;
+    --document-scroll-track-background: transparent;
+    --document-scroll-track-border-radius: 0;
+    --document-scroll-thickness-hover-active: 8px;
+}
+
+html, body, #__nuxt, #__layout {
+    min-height: 100vh;
+}
+
+html {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.document-scroll_hidden {
+    visibility: hidden;
+}
+
+.document-scroll__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.document-scroll__overlay {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.document-scroll__slider-y {
+    z-index: 9999;
+    pointer-events: auto;
+    position: absolute;
+    border-radius: var(--document-scroll-border-radius);
+    width: var(--document-scroll-thickness);
+    top: 0;
+    right: 0;
+    transition: width 200ms;
+    background: var(--document-scroll-background);
+}
+
+.document-scroll_grabbed {
+    -o-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.document-scroll__track-y {
+    z-index: 9999;
+    pointer-events: auto;
+    width: var(--document-scroll-thickness);
+    background: var(--document-scroll-track-background);
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    transition: width 200ms;
+    border-radius: var(--document-scroll-track-border-radius);
+}
+
+.document-scroll__track-y:hover {
+    width: var(--document-scroll-thickness-hover-active);
+}
+
+.document-scroll__track-y:hover .document-scroll__slider-y {
+    width: var(--document-scroll-thickness-hover-active);
+}
+
+.document-scroll__track-y:active {
+    width: var(--document-scroll-thickness-hover-active);
+}
+
+.document-scroll__track-y:active .document-scroll__slider-y {
+    width: var(--document-scroll-thickness-hover-active);
+}
+
+.document-scroll__slider-x {
+    background: var(--document-scroll-background);
+    z-index: 9999;
+    pointer-events: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: height 200ms;
+    border-radius: var(--document-scroll-border-radius);
+    height: var(--document-scroll-thickness, 4px);
+}
+
+.document-scroll__slider-x:hover {
+    height: var(--document-scroll-thickness-hover-active);
+}
+
+.document-scroll__slider-x:hover .document-scroll__slider-x {
+    height: var(--document-scroll-thickness-hover-active);
+}
+
+.document-scroll__slider-x:active {
+    height: var(--document-scroll-thickness-hover-active);
+}
+
+.document-scroll__slider-x:active .document-scroll__slider-x {
+    height: var(--document-scroll-thickness-hover-active);
+}
+
+.document-scroll__track-x {
+    width: 100%;
+    background: var(--document-scroll-track-background);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: var(--document-scroll-thickness, 4px);
+    transition: height 200ms;
+    border-radius: var(--document-scroll-track-border-radius);
+}
+
+.document-scroll__track-x:hover {
+    height: var(--document-scroll-thickness-hover-active);
+}
+
+.document-scroll__track-x:active {
+    height: var(--document-scroll-thickness-hover-active);
+}
