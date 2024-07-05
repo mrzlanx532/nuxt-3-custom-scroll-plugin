@@ -1,32 +1,12 @@
 {
   "name": "@mrzlanx532/nuxt-3-custom-scroll-plugin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Nuxt 3 custom scroll plugin. (document + v-scrollable directive)",
   "type": "module",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrzlanx532/nuxt-3-custom-scroll-plugin.git"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/index.js"
-    },
-    "./dist/css/common.css": {
-      "import": "./dist/css/common.css",
-      "require": "./dist/css/common.css",
-      "default": "./dist/css/common.css"
-    },
-    "./dist/css/document-scroll.no-ssr.css": {
-      "import": "./dist/css/document-scroll.no-ssr.css",
-      "require": "./dist/css/document-scroll.no-ssr.css",
-      "default": "./dist/css/document-scroll.no-ssr.css"
-    },
-    "./dist/css/v-scrollable.css": {
-      "import": "./dist/css/v-scrollable.css",
-      "require": "./dist/css/v-scrollable.css",
-      "default": "./dist/css/v-scrollable.css"
-    }
   },
   "author": "Danilov Deniv",
   "license": "ISC",
