@@ -1,4 +1,4 @@
-import createElementWithClass from './helpers'
+import createElementWithClass from './helpers.mjs'
 
 export default class Scrollable {
     MIN_SCROLL_HEIGHT = 30
