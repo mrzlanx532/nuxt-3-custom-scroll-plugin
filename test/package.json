@@ -1,7 +1,7 @@
 {
   "name": "test",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "nuxt-3-custom-scroll-plugin": "file:..",
+    "@mrzlanx532/nuxt-3-custom-scroll-plugin": "file:..",
     "vue": "^3.4.29"
   },
   "devDependencies": {

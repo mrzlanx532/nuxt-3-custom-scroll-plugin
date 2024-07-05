@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-3-custom-scroll-plugin",
+  "name": "@mrzlanx532/nuxt-3-custom-scroll-plugin",
   "version": "0.0.1",
   "description": "Nuxt 3 custom scroll plugin. (document + v-scrollable directive)",
   "type": "module",

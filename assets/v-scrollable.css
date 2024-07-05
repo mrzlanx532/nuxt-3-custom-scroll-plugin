@@ -1,0 +1,121 @@
+:root {
+    --scrollable-track-background: transparent;
+    --scrollable-slider-background: grey;
+}
+
+.v-scrollable {
+    opacity: 0;
+    transition: opacity 100ms;
+}
+
+.v-scrollable.v-scrollable_active {
+    opacity: 1;
+}
+
+.scrollable {
+    visibility: hidden;
+}
+
+.scrollable__container {
+    position: relative;
+}
+
+.scrollable__container.--without-track.scrollable__track-x,
+.scrollable__container.--without-track.scrollable__track-y {
+    background: transparent;
+}
+
+.scrollable__container.--smart-opacity.--smart-opacity-enabled .scrollable__track-x,
+.scrollable__container.--smart-opacity.--smart-opacity-enabled .scrollable__track-y {
+    opacity: 0.3;
+    transition: .5s;
+}
+
+.scrollable__container.--smart-opacity .scrollable__track-x,
+.scrollable__container.--smart-opacity .scrollable__track-y {
+    opacity: 0.3;
+    transition: none;
+}
+
+.scrollable__container.--smart-opacity:active .scrollable__track-x,
+.scrollable__container.--smart-opacity:hover .scrollable__track-x,
+.scrollable__container.--smart-opacity:active .scrollable__track-y,
+.scrollable__container.--smart-opacity:hover .scrollable__track-y {
+    opacity: 1;
+}
+
+.scrollable__wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    float: left;
+}
+
+.scrollable__track-x {
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--scrollable-track-background);
+    z-index: 1;
+}
+
+.scrollable__slider-x {
+    border-radius: 4px;
+    background: var(--scrollable-slider-background);
+    height: 4px;
+    position: absolute;
+    z-index: 1;
+}
+
+.scrollable__track-y {
+    width: 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: var(--scrollable-track-background);
+    z-index: 1;
+}
+
+.scrollable__slider-y {
+    border-radius: 4px;
+    background: var(--scrollable-slider-background);
+    width: 4px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.scrollable__content {
+    width: 100%;
+    padding: 0;
+    position: relative;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+
+.scrollable__scroll {
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    width: 9px;
+    border-radius: 4px;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+}
+
+.scrollable_hidden {
+    display: none;
+}
+
+.scrollable_grabbed {
+    -o-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
