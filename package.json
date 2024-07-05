@@ -1,0 +1,13 @@
+{
+  "name": "nuxt-3-custom-scroll-plugin",
+  "version": "0.0.1",
+  "description": "Nuxt 3 custom scroll plugin. (document + v-scrollable directive)",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrzlanx532/nuxt-3-custom-scroll-plugin.git"
+  },
+  "author": "Danilov Deniv",
+  "license": "ISC",
+  "homepage": "https://github.com/mrzlanx532/nuxt-3-custom-scroll-plugin#readme"
+}
