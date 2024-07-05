@@ -61,4 +61,4 @@ export default defineNuxtPlugin((nuxtApp) => {
 ```
 
 # Разработка и дебаг
-`cd ./test && npm run dev`
+`cd ./playground && npm install && npm run dev`
