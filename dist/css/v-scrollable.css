@@ -76,7 +76,7 @@
     right: 0;
     top: 0;
     background: var(--scrollable-track-background);
-    z-index: 5;
+    z-index: 1;
 }
 
 .scrollable__slider-y {
