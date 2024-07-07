@@ -4,6 +4,6 @@
     <RouterLink to="/modal">Modal</RouterLink>
   </nav>
   <main>
-    <RouterView />
+    <RouterView :key="$route.path"/>
   </main>
 </template>

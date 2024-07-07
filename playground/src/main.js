@@ -13,7 +13,7 @@ import '@mrzlanx532/nuxt-3-custom-scroll-plugin/dist/css/v-scrollable.css';
 import { Scrollable } from '@mrzlanx532/nuxt-3-custom-scroll-plugin'
 
 const routes = [
-    { path: '/', component: Index },
+    { path: '/', component: Modal },
     { path: '/modal', component: Modal }
 ]
 
