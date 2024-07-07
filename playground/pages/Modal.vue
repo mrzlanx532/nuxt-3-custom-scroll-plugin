@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="modal modal_active" style="height: 672px; width: 1920px;">
+  <div class="modal modal_active">
     <div class="modal__overlay"/>
     <div class="modal__container" v-scrollable>
       <div class="content" style="height: 1800px;">
