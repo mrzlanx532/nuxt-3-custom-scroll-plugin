@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@mrzlanx532/nuxt-3-custom-scroll-plugin": "file:..",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
