@@ -249,10 +249,7 @@ export default class Scrollable {
         this.root.style.width = originalDimensions.width
         this.root.style.maxHeight = originalDimensions.maxHeight
         this.root.style.maxWidth = originalDimensions.maxWidth
-
-        if (originalDimensions.height !== '0px') {
-            this.root.style.height = originalDimensions.height
-        }
+        this.root.style.height = originalDimensions.height
 
         this.trackY.style.top = computedStyles.top
         this.trackX.style.left = computedStyles.left
