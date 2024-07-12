@@ -205,7 +205,8 @@ export default class Scrollable {
 
         const originalComputedStyles = {
             maxHeight: computedStyles.maxHeight,
-            maxWidth: computedStyles.maxWidth
+            maxWidth: computedStyles.maxWidth,
+            width: computedStyles.width,
         }
 
         const mo = new MutationObserver((mutations) => {
@@ -250,6 +251,7 @@ export default class Scrollable {
 
         this.root.style.maxHeight = originalComputedStyles.maxHeight
         this.root.style.maxWidth = originalComputedStyles.maxWidth
+        this.root.style.width = originalComputedStyles.width
 
         if (options.hasOwnProperty('classes') && Array.isArray(options.classes)) {
             options.classes.map((className) => {
