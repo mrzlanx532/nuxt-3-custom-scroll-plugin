@@ -252,8 +252,14 @@ export default class Scrollable {
 
         this.root.style.maxHeight = originalComputedStyles.maxHeight
         this.root.style.maxWidth = originalComputedStyles.maxWidth
-        this.root.style.width = originalComputedStyles.width
-        this.root.style.height = originalComputedStyles.height
+
+        if (originalComputedStyles.width !== '0px') {
+            this.root.style.width = originalComputedStyles.width
+        }
+
+        if (originalComputedStyles.height !== '0px') {
+            this.root.style.height = originalComputedStyles.height
+        }
 
         if (options.hasOwnProperty('classes') && Array.isArray(options.classes)) {
             options.classes.map((className) => {
