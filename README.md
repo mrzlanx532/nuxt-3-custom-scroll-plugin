@@ -36,6 +36,19 @@ export default defineNuxtPlugin((nuxtApp) => {
     })
 })
 ```
+# Использование v-scrollable
+
+## inheritanceDimensions: true
+Позволяет перенести размеры оборачиваемого элемента в обертку `v-scrollable`.  
+А именно: забрать `maxHeight`, `maxWidth`, `height`, `width`
+```vue
+<div class="modal__container" v-scrollable="{inheritanceDimensions: true}">
+  <div class="content" style="height: 1800px;">
+    <button>Подтвердить?</button>
+  </div>
+</div>
+```
+
 
 
 # CSS Variables
