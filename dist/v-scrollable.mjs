@@ -196,6 +196,17 @@ export default class Scrollable {
 
     wrapTarget(el, options) {
 
+        this.el = el
+
+        const parentNode = el.parentNode
+
+        const computedStyles = window.getComputedStyle(this.el)
+        const computedStylesParentNode = window.getComputedStyle(parentNode)
+
+        const originalComputedStyles = {
+            maxHeight: computedStyles.maxHeight,
+        }
+
         const mo = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 if (!el.classList.contains('scrollable__content')) {
@@ -208,9 +219,6 @@ export default class Scrollable {
             attributeFilter: ['class']
         })
 
-        const parentNode = el.parentNode
-
-        this.el = el
         this.trackY = createElementWithClass('scrollable__track-y')
         this.trackX = createElementWithClass('scrollable__track-x')
         this.sliderY = createElementWithClass('scrollable__slider-y')
@@ -232,15 +240,14 @@ export default class Scrollable {
         this.wrapper.appendChild(this.trackY)
         this.wrapper.appendChild(this.trackX)
 
-        const computedStyles = window.getComputedStyle(this.el)
-        const computedStylesParentNode = window.getComputedStyle(parentNode)
-
         if (computedStylesParentNode.display === 'flex') {
             this.root.style.overflow = 'hidden'
         }
 
         this.trackY.style.top = computedStyles.top
         this.trackX.style.left = computedStyles.left
+
+        this.root.style.maxHeight = originalComputedStyles.maxHeight
 
         if (options.hasOwnProperty('classes') && Array.isArray(options.classes)) {
             options.classes.map((className) => {
