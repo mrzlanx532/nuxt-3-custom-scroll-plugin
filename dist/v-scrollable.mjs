@@ -222,8 +222,11 @@ export default class Scrollable {
 
         const mo = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
-                if (!el.classList.contains('scrollable__content')) {
-                    el.classList.add('scrollable__content')
+
+                console.log(mutation)
+
+                if (!this.el.classList.contains('scrollable__content')) {
+                    this.el.classList.add('scrollable__content')
                 }
             })
         })
