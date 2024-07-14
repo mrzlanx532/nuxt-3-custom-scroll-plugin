@@ -20,6 +20,10 @@
     position: relative;
 }
 
+.scrollable__container.--small {
+    max-width: 300px;
+}
+
 .scrollable__container.--without-track.scrollable__track-x,
 .scrollable__container.--without-track.scrollable__track-y {
     background: transparent;

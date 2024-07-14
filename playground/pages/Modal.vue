@@ -5,7 +5,7 @@
 <template>
   <div class="modal modal_active" style="height: 672px; width: 1920px;">
     <div class="modal__overlay"/>
-    <div class="modal__container" v-scrollable="{inheritanceDimensions: true}">
+    <div class="modal__container" v-scrollable="{inheritanceDimensions: true, classes: ['--small']}">
       <div class="content" style="height: 1800px;">
         <button>Подтвердить?</button>
       </div>

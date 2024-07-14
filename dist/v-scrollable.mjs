@@ -200,6 +200,23 @@ export default class Scrollable {
 
         const parentNode = el.parentNode
 
+        this.root = createElementWithClass('scrollable__container')
+
+        if (options.hasOwnProperty('classes') && Array.isArray(options.classes)) {
+
+            options.classes.map((className) => {
+
+                this.el.classList.add(className)
+                this.root.classList.add(className)
+
+                if (className === '--smart-opacity') {
+                    setTimeout(() => {
+                        this.root.classList.add('--smart-opacity-enabled')
+                    })
+                }
+            });
+        }
+
         const computedStyles = window.getComputedStyle(this.el)
         const computedStylesParentNode = window.getComputedStyle(parentNode)
 
@@ -226,7 +243,6 @@ export default class Scrollable {
         this.trackX = createElementWithClass('scrollable__track-x')
         this.sliderY = createElementWithClass('scrollable__slider-y')
         this.sliderX = createElementWithClass('scrollable__slider-x')
-        this.root = createElementWithClass('scrollable__container')
         this.wrapper = createElementWithClass('scrollable__wrapper')
 
         this.root.appendChild(this.wrapper)
@@ -261,19 +277,6 @@ export default class Scrollable {
             if (originalComputedStyles.height !== '0px') {
                 this.root.style.height = originalComputedStyles.height
             }
-        }
-
-        if (options.hasOwnProperty('classes') && Array.isArray(options.classes)) {
-            options.classes.map((className) => {
-
-                this.root.classList.add(className)
-
-                if (className === '--smart-opacity') {
-                    setTimeout(() => {
-                        this.root.classList.add('--smart-opacity-enabled')
-                    })
-                }
-            });
         }
     }
 }
