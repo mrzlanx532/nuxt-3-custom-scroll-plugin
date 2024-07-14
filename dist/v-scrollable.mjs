@@ -227,7 +227,7 @@ export default class Scrollable {
                     this.el.classList.add('scrollable__content')
                 }
 
-                this.wrappedElUpdatedDimensions()
+                this.wrappedElUpdatedDimensions(options)
             })
         })
         mo.observe(el, {
