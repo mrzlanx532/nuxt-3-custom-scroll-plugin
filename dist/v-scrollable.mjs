@@ -220,15 +220,6 @@ export default class Scrollable {
         const computedStyles = window.getComputedStyle(this.el)
         const computedStylesParentNode = window.getComputedStyle(parentNode)
 
-        const originalComputedStyles = {
-            maxHeight: computedStyles.maxHeight,
-            maxWidth: computedStyles.maxWidth,
-            width: computedStyles.width,
-            height: computedStyles.height,
-        }
-
-        console.log(originalComputedStyles)
-
         const mo = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 if (!el.classList.contains('scrollable__content')) {
@@ -269,15 +260,15 @@ export default class Scrollable {
         this.trackX.style.left = computedStyles.left
 
         if (options?.inheritanceDimensions === true) {
-            this.root.style.maxHeight = originalComputedStyles.maxHeight
-            this.root.style.maxWidth = originalComputedStyles.maxWidth
+            this.root.style.maxHeight = computedStyles.maxHeight
+            this.root.style.maxWidth = computedStyles.maxWidth
 
-            if (originalComputedStyles.width !== '0px') {
-                this.root.style.width = originalComputedStyles.width
+            if (computedStyles.width !== '0px') {
+                this.root.style.width = computedStyles.width
             }
 
-            if (originalComputedStyles.height !== '0px') {
-                this.root.style.height = originalComputedStyles.height
+            if (computedStyles.height !== '0px') {
+                this.root.style.height = computedStyles.height
             }
         }
     }
