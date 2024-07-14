@@ -3,11 +3,18 @@
 </script>
 
 <template>
-  <div class="modal modal_active" style="height: 672px; width: 1920px;">
+  <div class="modal modal_active">
     <div class="modal__overlay"/>
     <div class="modal__container" v-scrollable="{inheritanceDimensions: true, classes: ['--small']}">
-      <div class="content" style="height: 1800px;">
-        <button>Подтвердить?</button>
+      <div class="modal-confirm">
+        <div class="modal-confirm__close-button-container">
+          <div class="modal-confirm__close-button"/>
+        </div>
+        <div class="modal-confirm__question">Вы уверены?</div>
+        <div class="modal-confirm__actions">
+          <button class="btn --outline-contrast-danger --big --full-width">Нет</button>
+          <button class="btn --success --big --full-width">Да</button>
+        </div>
       </div>
     </div>
   </div>

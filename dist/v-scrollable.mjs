@@ -227,6 +227,8 @@ export default class Scrollable {
             height: computedStyles.height,
         }
 
+        console.log(originalComputedStyles)
+
         const mo = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 if (!el.classList.contains('scrollable__content')) {
