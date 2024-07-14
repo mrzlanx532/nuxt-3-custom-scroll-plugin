@@ -223,11 +223,11 @@ export default class Scrollable {
         const mo = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
 
-                console.log(mutation)
-
                 if (!this.el.classList.contains('scrollable__content')) {
                     this.el.classList.add('scrollable__content')
                 }
+
+                this.wrappedElUpdatedDimensions()
             })
         })
         mo.observe(el, {
@@ -261,6 +261,9 @@ export default class Scrollable {
 
         this.trackY.style.top = computedStyles.top
         this.trackX.style.left = computedStyles.left
+    }
+    wrappedElUpdatedDimensions(options) {
+        const computedStyles = window.getComputedStyle(this.el)
 
         if (options?.inheritanceDimensions === true) {
             this.root.style.maxHeight = computedStyles.maxHeight
