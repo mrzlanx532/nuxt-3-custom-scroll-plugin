@@ -236,8 +236,18 @@ export default class Scrollable {
         })
 
         this.trackY = createElementWithClass('scrollable__track-y')
+
+        if (options.trackYClass) {
+            this.trackY.classList.add(options.trackYClass)
+        }
+
         this.trackX = createElementWithClass('scrollable__track-x')
         this.sliderY = createElementWithClass('scrollable__slider-y')
+
+        if (options.sliderYClass) {
+            this.sliderY.classList.add(options.sliderYClass)
+        }
+
         this.sliderX = createElementWithClass('scrollable__slider-x')
         this.wrapper = createElementWithClass('scrollable__wrapper')
 
