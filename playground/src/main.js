@@ -27,7 +27,10 @@ const app = createApp(App)
 app.use(router)
 app.directive('scrollable', {
     mounted: function (el, binding) {
-        new Scrollable(el, binding.value)
+        el.scrollable_manager = new Scrollable(el, binding.value)
+    },
+    unmounted: function (el, binding) {
+        el.scrollable_manager.destroy()
     }
 })
 app.mount('#app')

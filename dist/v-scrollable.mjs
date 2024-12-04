@@ -107,8 +107,11 @@ export default class Scrollable {
             return false
         }
 
-        ctx.sliderX.addEventListener('mousedown', mouseDownListener.bind(ctx, mouseMoveListenerX, mouseUpListenerX))
-        ctx.sliderY.addEventListener('mousedown', mouseDownListener.bind(ctx, mouseMoveListenerY, mouseUpListenerY))
+        this.sliderXMouseDownListener = mouseDownListener.bind(ctx, mouseMoveListenerX, mouseUpListenerX)
+        this.sliderYMouseDownListener = mouseDownListener.bind(ctx, mouseMoveListenerY, mouseUpListenerY)
+
+        ctx.sliderX.addEventListener('mousedown', this.sliderXMouseDownListener)
+        ctx.sliderY.addEventListener('mousedown', this.sliderYMouseDownListener)
     }
 
     updateDimensions() {
@@ -287,5 +290,14 @@ export default class Scrollable {
                 this.root.style.height = computedStyles.height
             }
         }
+    }
+    destroy() {
+        window.removeEventListener('resize', this.updateScroll)
+
+        this.el.removeEventListener('scroll', this.updateScroll)
+        this.el.removeEventListener('mouseenter', this.updateScroll)
+
+        this.sliderX.removeEventListener('mousedown', this.sliderXMouseDownListener)
+        this.sliderY.removeEventListener('mousedown', this.sliderYMouseDownListener)
     }
 }
