@@ -126,6 +126,21 @@ export default class Scrollable {
         this.sliderXWidthWithoutRestrictions = width
     }
 
+    scrollToTop() {
+        this.el.scrollTop = 0
+        this.sliderY.style.transform = 'translateY(0)'
+    }
+
+    scrollToLeft() {
+        this.el.scrollLeft = 0
+        this.sliderX.style.transform = 'translateX(0)'
+    }
+
+    scrollToDefault() {
+        this.scrollToTop()
+        this.scrollToLeft()
+    }
+
     updateScroll() {
 
         this.updateDimensions()
