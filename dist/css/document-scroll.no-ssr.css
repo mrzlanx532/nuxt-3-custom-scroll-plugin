@@ -1,12 +1,3 @@
-:root {
-    --document-scroll-border-radius: 5px;
-    --document-scroll-thickness: 4px;
-    --document-scroll-background: grey;
-    --document-scroll-track-background: transparent;
-    --document-scroll-track-border-radius: 0;
-    --document-scroll-thickness-hover-active: 8px;
-}
-
 html, body, #__nuxt, #__layout {
     min-height: 100vh;
 }
@@ -47,12 +38,12 @@ html {
     z-index: 9999;
     pointer-events: auto;
     position: absolute;
-    border-radius: var(--document-scroll-border-radius);
-    width: var(--document-scroll-thickness);
+    border-radius: var(--document-scroll-border-radius, 5px);
+    width: var(--document-scroll-thickness, 4px);
     top: 0;
     right: 0;
     transition: width 200ms;
-    background: var(--document-scroll-background);
+    background: var(--document-scroll-background, grey);
 }
 
 .document-scroll_grabbed {
@@ -66,75 +57,75 @@ html {
 .document-scroll__track-y {
     z-index: 9999;
     pointer-events: auto;
-    width: var(--document-scroll-thickness);
-    background: var(--document-scroll-track-background);
+    width: var(--document-scroll-thickness, 4px);
+    background: var(--document-scroll-track-background, transparent);
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
     transition: width 200ms;
-    border-radius: var(--document-scroll-track-border-radius);
+    border-radius: var(--document-scroll-track-border-radius, 0);
 }
 
 .document-scroll__track-y:hover {
-    width: var(--document-scroll-thickness-hover-active);
+    width: var(--document-scroll-thickness-hover-active, 8px);
 }
 
 .document-scroll__track-y:hover .document-scroll__slider-y {
-    width: var(--document-scroll-thickness-hover-active);
+    width: var(--document-scroll-thickness-hover-active, 8px);
 }
 
 .document-scroll__track-y:active {
-    width: var(--document-scroll-thickness-hover-active);
+    width: var(--document-scroll-thickness-hover-active, 8px);
 }
 
 .document-scroll__track-y:active .document-scroll__slider-y {
-    width: var(--document-scroll-thickness-hover-active);
+    width: var(--document-scroll-thickness-hover-active, 8px);
 }
 
 .document-scroll__slider-x {
-    background: var(--document-scroll-background);
+    background: var(--document-scroll-background, grey);
     z-index: 9999;
     pointer-events: auto;
     position: absolute;
     bottom: 0;
     left: 0;
     transition: height 200ms;
-    border-radius: var(--document-scroll-border-radius);
+    border-radius: var(--document-scroll-border-radius, 5px);
     height: var(--document-scroll-thickness, 4px);
 }
 
 .document-scroll__slider-x:hover {
-    height: var(--document-scroll-thickness-hover-active);
+    height: var(--document-scroll-thickness-hover-active, 8px);
 }
 
 .document-scroll__slider-x:hover .document-scroll__slider-x {
-    height: var(--document-scroll-thickness-hover-active);
+    height: var(--document-scroll-thickness-hover-active, 8px);
 }
 
 .document-scroll__slider-x:active {
-    height: var(--document-scroll-thickness-hover-active);
+    height: var(--document-scroll-thickness-hover-active, 8px);
 }
 
 .document-scroll__slider-x:active .document-scroll__slider-x {
-    height: var(--document-scroll-thickness-hover-active);
+    height: var(--document-scroll-thickness-hover-active, 8px);
 }
 
 .document-scroll__track-x {
     width: 100%;
-    background: var(--document-scroll-track-background);
+    background: var(--document-scroll-track-background, transparent);
     position: absolute;
     left: 0;
     bottom: 0;
     height: var(--document-scroll-thickness, 4px);
     transition: height 200ms;
-    border-radius: var(--document-scroll-track-border-radius);
+    border-radius: var(--document-scroll-track-border-radius, 0);
 }
 
 .document-scroll__track-x:hover {
-    height: var(--document-scroll-thickness-hover-active);
+    height: var(--document-scroll-thickness-hover-active, 8px);
 }
 
 .document-scroll__track-x:active {
-    height: var(--document-scroll-thickness-hover-active);
+    height: var(--document-scroll-thickness-hover-active, 8px);
 }

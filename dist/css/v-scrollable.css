@@ -1,8 +1,3 @@
-:root {
-    --scrollable-track-background: transparent;
-    --scrollable-slider-background: grey;
-}
-
 .v-scrollable {
     opacity: 0;
     transition: opacity 100ms;
@@ -62,13 +57,13 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background: var(--scrollable-track-background);
+    background: var(--scrollable-track-background, transparent);
     z-index: 1;
 }
 
 .scrollable__slider-x {
     border-radius: 4px;
-    background: var(--scrollable-slider-background);
+    background: var(--scrollable-slider-background, grey);
     height: 4px;
     position: absolute;
     z-index: 1;
@@ -79,13 +74,13 @@
     position: absolute;
     right: 0;
     top: 0;
-    background: var(--scrollable-track-background);
+    background: var(--scrollable-track-background, transparent);
     z-index: 5;
 }
 
 .scrollable__slider-y {
     border-radius: 4px;
-    background: var(--scrollable-slider-background);
+    background: var(--scrollable-slider-background, grey);
     width: 4px;
     position: absolute;
     right: 0;
