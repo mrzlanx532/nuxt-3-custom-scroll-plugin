@@ -158,18 +158,8 @@ export default class Scrollable {
 
         const ctx = this
 
-        /**
-         * Временно закоментировал:
-         *
-         * Долго пропадал скрол и было видно, когда элемент пропадает в фильтре даты в годах:
-         * https://app.asana.com/0/1205846888116957/1207582173354072
-         *
-         * Если не увижу разницы в работе других скроллов, то удалить насовсем
-         **/
-        //window.requestAnimationFrame(function() {
-            ctx.renderYScroll()
-            ctx.renderXScroll()
-        //});
+        ctx.renderYScroll()
+        ctx.renderXScroll()
     }
 
     renderYScroll() {

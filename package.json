@@ -1,9 +1,12 @@
 {
   "name": "@mrzlanx532/nuxt-3-custom-scroll-plugin",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Nuxt 3 custom scroll plugin. (document + v-scrollable directive)",
   "type": "module",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrzlanx532/nuxt-3-custom-scroll-plugin.git"
