@@ -7,15 +7,15 @@
 ```js
 import { defineNuxtPlugin, onNuxtReady } from '#app'
 
-import 'nuxt-3-custom-scroll-plugin/assets/common.css'
+import '@mrzlanx532/nuxt-3-custom-scroll-plugin/dist/css/common.css'
 
 /** Установка v-scrollable директивы + css */
 import { Scrollable } from 'nuxt-3-custom-scroll-plugin'
-import 'nuxt-3-custom-scroll-plugin/assets/v-scrollable.css'
+import '@mrzlanx532/nuxt-3-custom-scroll-plugin/dist/css/v-scrollable.css'
 
 /** Установка DocumentScroll + css */
 import { DocumentScroll } from 'nuxt-3-custom-scroll-plugin'
-import 'nuxt-3-custom-scroll-plugin/assets/document-scroll.no-ssr.css'
+import '@mrzlanx532/nuxt-3-custom-scroll-plugin/dist/css/document-scroll.no-ssr.css'
 
 export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.directive('scrollable', {
