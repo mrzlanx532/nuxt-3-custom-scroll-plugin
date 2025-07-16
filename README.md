@@ -10,11 +10,11 @@ import { defineNuxtPlugin, onNuxtReady } from '#app'
 import '@mrzlanx532/nuxt-3-custom-scroll-plugin/dist/css/common.css'
 
 /** Установка v-scrollable директивы + css */
-import { Scrollable } from 'nuxt-3-custom-scroll-plugin'
+import { Scrollable } from '@mrzlanx532/nuxt-3-custom-scroll-plugin'
 import '@mrzlanx532/nuxt-3-custom-scroll-plugin/dist/css/v-scrollable.css'
 
 /** Установка DocumentScroll + css */
-import { DocumentScroll } from 'nuxt-3-custom-scroll-plugin'
+import { DocumentScroll } from '@mrzlanx532/nuxt-3-custom-scroll-plugin'
 import '@mrzlanx532/nuxt-3-custom-scroll-plugin/dist/css/document-scroll.no-ssr.css'
 
 export default defineNuxtPlugin((nuxtApp) => {
