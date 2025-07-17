@@ -34,7 +34,7 @@
   pointer-events: none;
 }
 .modal_active {
-  pointer-events: auto;
+  pointer-events: none;
 }
 .modal__overlay {
   background: black;
